@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        const products = [
+            {
+                title:'Pan',
+                price: 11
+            },
+            {
+                title:'Empanada',
+                price: 25
+            }
+        ];
+
+        const app = document.getElementById('app');
+        const list = products.map(products =>{
+            return `<li>${products.title} - ${products.price}</li>`
+        })
+        app.innerHTML = list.join('');
+    </script>
+</body>
+</html>
