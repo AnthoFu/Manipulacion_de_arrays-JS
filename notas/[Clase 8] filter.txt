@@ -1,0 +1,44 @@
+Resumen . filter() lo que hace es filtrar el array original en base a una condición, los que la cumplan estaran en el nuevo array creado. . Por lo tanto filter() es inmutable y el nuevo array creado solamente puede contener:
+
+cero coincidencias
+todas coincidencias
+algunas coincidencias
+Pero nunca más coincidencias que el tamaño del array original.
+
+``
+const words = ["spray", "limit", "elite", "exuberant"];
+
+// con for
+const newArray = [];
+for (let index = 0; index < words.length; index++) {
+  const element = words[index];
+  if (element.length >= 6) {
+    newArray.push(element);
+  }
+}
+
+// VS
+
+// con filter
+const rta = words.filter((element) => element.length >= 6);
+
+// en ambos casos, el resultado:
+> [ 'exuberant' ]
+``
+
+offtopic: el método includes() determina si una matriz incluye un determinado elemento, devuelve true o false según corresponda.
+
+``
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// expected truee
+
+const pets = ['cat', 'dog', 'bat'];
+
+console.log(pets.includes('cat'));
+// expected true
+
+console.log(pets.includes('at'));
+// expected false
+``
