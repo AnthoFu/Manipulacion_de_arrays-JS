@@ -41,7 +41,7 @@ const output = AgregarTaxes(Input);
 app1.innerHTML = `
 <ul>
     <li>Original: ${Input.map(item => 
-        `${item.name} (Precio: ${item.price * 2})`
+        `${item.name} (Precio: ${item.price})`
     ).join(', ')}</li>
     
     <li>Resultado: ${output.map(item => 
